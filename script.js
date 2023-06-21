@@ -20,3 +20,44 @@ cancelBtn.onclick = () =>{
     searchBtn.classList.remove("active");
     cancelBtn.classList.remove("active");
 }
+
+var recreationalEvents = [
+    "Piquenique no parque",
+    "Festa à fantasia",
+    "Campeonato de futebol",
+    "Noite de jogos de tabuleiro",
+    "Aula de dança",
+    "Passeio de bicicleta",
+  ];
+  
+  // Array de exemplos de eventos corporativos
+  var corporateEvents = [
+    "Seminário de negócios",
+    "Workshop de liderança",
+    "Conferência sobre inovação",
+    "Apresentação de resultados",
+    "Treinamento de equipe",
+  ];
+  
+  // Função para exibir exemplos aleatórios em forma de lista
+  function displayRandomExamples() {
+    var recreationalList = document.getElementById("recreational-events");
+    var corporateList = document.getElementById("corporate-events");
+  
+    // Exibir exemplos aleatórios de eventos recreativos
+    for (var i = 0; i < recreationalEvents.length; i++) {
+      var listItem = document.createElement("li");
+      listItem.textContent = recreationalEvents[i];
+      recreationalList.appendChild(listItem);
+    }
+  
+    // Exibir exemplos aleatórios de eventos corporativos
+    for (var j = 0; j < corporateEvents.length; j++) {
+      var listItem = document.createElement("li");
+      listItem.textContent = corporateEvents[j];
+      corporateList.appendChild(listItem);
+    }
+  }
+  
+  // Chamar a função para exibir os exemplos aleatórios ao carregar a página
+  displayRandomExamples();
