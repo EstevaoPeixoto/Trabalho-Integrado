@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Fortes Engenharia</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <div class="hero">
+            <nav>
+                <a href="index.html"><img src="imagens/fortes_logo.png" class="logo"></a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="info.html">Sobre nós</a></li>
+
+                    <li><a href="#">Contato</a></li>
+                </ul>
+
+                <div class="search-box">
+                    <input type="text" placeholder="Pesquisa">
+
+                    <div class="search-btn">
+                        <img src="imagens/pesquisa.png" class="fa-search">
+                    </div>
+
+                    <div class="cancel-btn">
+                        <img src="imagens/cancel.png" class="fa-times">
+                    </div>
+                </div>
+
+                <img src="imagens/user_imagem.png" class="user-pic" onclick="toggleMenu()">
+
+                <div class="sub-menu-wrap" id="subMenu">
+                    <div class="sub-menu">
+                        <div class="user-info">
+                            <img src="imagens/user_imagem.png">
+
+                            <h3>Nome do Usuário</h3>
+                        </div>
+
+                        <hr>
+
+                        <a href="#" class="sub-menu-link"><img src="imagens/profile.png"><p>Editar Perfil</p><span>></span></a>
+
+                        <a href="#" class="sub-menu-link"><img src="imagens/setting.png"><p>Configurações e Privacidade</p><span>></span></a>
+
+                        <a href="#" class="sub-menu-link"><img src="imagens/help.png"><p>Ajuda e Suporte</p><span>></span></a>
+
+                        <a href="#" class="sub-menu-link"><img src="imagens/logout.png"><p>Sair</p><span>></span></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <section class="py-5 my-5">
+            <div class="container">
+                <h1 class="mb-5">Editar Perfil</h1>
+                <div class="bg-white shadow rounded-lg d-block d-sm-flex">
+                    <div class="profile-tab-nav border-right">
+                        <div class="p-4">
+                            <div class="img-circle text-center mb-3">
+                                <img src="imagens/user_imagem.png" alt="Image" class="shadow">
+                            </div>
+                            <h4 class="text-center">Nome do Usuário</h4>
+                        </div>
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <a class="nav-link active" id="account-tab" data-toggle="pill" href="#account" role="tab" aria-controls="account" aria-selected="true">
+                                <i class="fa fa-home text-center mr-1"></i> 
+                                Perfil
+                            </a>
+                            <a class="nav-link" id="password-tab" data-toggle="pill" href="#password" role="tab" aria-controls="password" aria-selected="false">
+                                <i class="fa fa-key text-center mr-1"></i> 
+                                Senha
+                            </a>
+                            <a class="nav-link" id="security-tab" data-toggle="pill" href="#security" role="tab" aria-controls="security" aria-selected="false">
+                                <i class="fa fa-user text-center mr-1"></i> 
+                                Segurança
+                            </a>
+                            <a class="nav-link" id="application-tab" data-toggle="pill" href="#application" role="tab" aria-controls="application" aria-selected="false">
+                                <i class="fa fa-tv text-center mr-1"></i> 
+                                Site
+                            </a>
+                            <a class="nav-link" id="notification-tab" data-toggle="pill" href="#notification" role="tab" aria-controls="notification" aria-selected="false">
+                                <i class="fa fa-bell text-center mr-1"></i> 
+                                Notificações
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="account-tab">
+                            <h3 class="mb-4">Configurações da Conta</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                          <label>Nome:</label>
+                                          <input type="text" class="form-control" placeholder="Ex: Arthur">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                          <label>Sobrenome:</label>
+                                          <input type="text" class="form-control" placeholder="Ex: Souza">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                          <label>Email:</label>
+                                          <input type="text" class="form-control" placeholder="email@dominio.com">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                          <label>Telefone:</label>
+                                          <input type="text" class="form-control" placeholder="(##)#####-####">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                          <label>Empresa:</label>
+                                          <input type="text" class="form-control" placeholder="Nome da Empresa">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                          <label>Cargo Ocupado:</label>
+                                          <input type="text" class="form-control" placeholder="Ex: Engenheiro Civil">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                          <label>Lista de talentos:</label>
+                                        <textarea class="form-control" rows="4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore vero enim error similique quia numquam ullam corporis officia odio repellendus aperiam consequatur laudantium porro voluptatibus, itaque laboriosam veritatis voluptatum distinctio!</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary">Update</button>
+                                <button class="btn btn-light">Cancel</button>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
+                            <h3 class="mb-4">Configuração de Senha</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                          <label>Senha antiga</label>
+                                          <input type="password" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                          <label>Nova senha</label>
+                                          <input type="password" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                          <label>Confirmar nova senha</label>
+                                          <input type="password" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary">Update</button>
+                                <button class="btn btn-light">Cancel</button>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
+                            <h3 class="mb-4">Configuração de Segurança</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                          <label>Login</label>
+                                          <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                          <label>Autenticador</label>
+                                          <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="recovery">
+                                            <label class="form-check-label" for="recovery">
+                                            Recuperar
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary">Update</button>
+                                <button class="btn btn-light">Cancel</button>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="application" role="tabpanel" aria-labelledby="application-tab">
+                            <h3 class="mb-4">Configurações do Site</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="app-check">
+                                            <label class="form-check-label" for="app-check">
+                                            Verificação em dois fatores
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" >
+                                            <label class="form-check-label" for="defaultCheck2">
+                                            Lorem ipsum dolor sit.
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary">Update</button>
+                                <button class="btn btn-light">Cancel</button>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="notification" role="tabpanel" aria-labelledby="notification-tab">
+                            <h3 class="mb-4">Configuração de Notificações</h3>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="notification1">
+                                    <label class="form-check-label" for="notification1">
+                                        Ativar notificações neste navegador
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="notification2" >
+                                    <label class="form-check-label" for="notification2">
+                                        hic nesciunt repellat perferendis voluptatum totam porro eligendi.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="notification3" >
+                                    <label class="form-check-label" for="notification3">
+                                        commodi fugiat molestiae tempora corporis. Sed dignissimos suscipit
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary">Update</button>
+                                <button class="btn btn-light">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+        <script src="script.js"></script>
+    </body>
+</html>
