@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+    
+        <div class="hero">
+            <nav>
+                <a href="index.html"><img src="imagens/fortes_logo.png" class="logo"></a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="info.html">Sobre nós</a></li>
+
+                    <li><a href="#">Contato</a></li>
+                </ul>
+
+                <div class="search-box">
+                    <input type="text" placeholder="Pesquisa">
+
+                    <div class="search-btn">
+                        <img src="imagens/pesquisa.png" class="fa-search">
+                    </div>
+
+                    <div class="cancel-btn">
+                        <img src="imagens/cancel.png" class="fa-times">
+                    </div>
+                </div>
+
+                <img src="imagens/user_imagem.png" class="user-pic" onclick="toggleMenu()">
+
+                <div class="sub-menu-wrap" id="subMenu">
+                    <div class="sub-menu">
+                        <div class="user-info">
+                            <img src="imagens/user_imagem.png">
+
+                            <h3>Nome do Usuário</h3>
+                        </div>
+
+                        <hr>
+
+                        <a href="perfiledit.html" class="sub-menu-link"><img src="imagens/profile.png"><p>Editar Perfil</p><span>></span></a>
+
+                        <a href="#" class="sub-menu-link"><img src="imagens/setting.png"><p>Configurações e Privacidade</p><span>></span></a>
+
+                        <a href="#" class="sub-menu-link"><img src="imagens/help.png"><p>Ajuda e Suporte</p><span>></span></a>
+
+                        <a href="#" class="sub-menu-link"><img src="imagens/logout.png"><p>Sair</p><span>></span></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <main>
+            <section class="contact-section">
+              <h2>Fale Conosco</h2>
+              <div class="contact-form">
+                <form action="#" method="post">
+                  <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="text" id="email" name="email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <input type="submit" value="Enviar">
+                  </div>
+                </form>
+              </div>
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
